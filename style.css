@@ -1,0 +1,19 @@
+/* Resets elements on the page and gives control to edit thr website´s style from scratch */
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Font colours for the links in the main menu in the class "menu-bar" */
+.menu-bar
+{
+    color: hotpink;
+}
+
+/* Menu-bar colours change when mouse is over it */ 
+.menu-bar:hover
+{
+    color: indigo;
+}
