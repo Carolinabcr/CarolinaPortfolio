@@ -1,20 +1,48 @@
-/* Resets elements on the page and gives control to edit thr website´s style from scratch */
+/* By using the universal selector, this resets elements on the page and gives control to edit thr website´s style from scratch */
 *
 {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Font colours for the links in the main menu in the class "menu-bar" */
+/* Pages backgrounds start here */
+#main-body
+{
+    background-color: black;
+    background-image: url("images/background.JPG");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-attachment: fixed;
+    background-size: 1000px;
+}
+
+.backgrounds
+{
+    background-color: black;
+}
+
+/* Main menu starts here */
+nav
+{
+    /*border: 2px solid #FF0000;*/
+    margin: 40px;
+    font-size: 14px;
+}
+
+nav span
+{
+    color: rgb(255, 0, 128);
+}
+
 #main-menu ul
 {
     /* Removes bullets from list */
     list-style: none;
-    padding: 0;
     text-align: right;
-    background-color: indianred;
+    /*background-color: indianred;*/
+    /*font-size: 1vw;*/
 }
 #main-menu ul li
 {
@@ -24,19 +52,41 @@
 
 #main-menu ul li a
 {
-    color: rgb(0, 0, 0);
-    padding: 1%;
+    color: white;
+    padding: 10px;
     /* Removes underline and other decorations from link */
     text-decoration: none;
     /* Using inline "block" so the area around the font is also clickable */
     display: inline-block;
-    transition: background .5s;
+    border: 1px solid rgb(255, 0, 128);
+    overflow: hidden;
+    position: relative;
+    /*border-radius: 10px;*/
 }
 
 /* Menu-bar colours change when mouse is over it */ 
 #main-menu ul li a:hover
 {
-    background-color: rgb(255, 255, 255); 
+    border: 1px solid rgb(161, 255, 0);
+    box-shadow: 1px 1px 25px 10px rgba(161, 255, 0, 0.6);
+    transition: .4s;
+}
+
+#main-menu ul li a:before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(161, 255, 0, 0.6), transparent);
+    transition: all 650ms;
+}
+
+#main-menu ul li a:hover:before
+{
+    left: 100%;
 }
 
 /* Drop-down menu */
@@ -47,7 +97,6 @@
     /* Locks drop-down menu on the left side of the main tab it´s coming from */
     left: 0;
     text-align: center;
-    width: 100%;
 }
 
 #main-menu ul li:hover ul
@@ -60,9 +109,133 @@
     display: block;
 }
 
+/* Main page's content */
 .banner
 {
+    /*border: 2px solid #FF0000;*/
     width: 100%;
-    height: 100vh;
+    height: 50vh;
+    margin-top: 8%;
+    padding: 8%;
+    color: white;
+    text-align: left;
+    /* This maintains the total size of the box regardless of changing the inside values */
+    box-sizing: border-box;
+    text-shadow: 2px 2px 5px gray;
+}
+
+.banner a
+{
+    text-decoration: none;
+    border: 1px solid rgb(255, 0, 128);
+    padding: 10px;
+    color: rgb(255, 0, 128);
+    text-shadow: 2px 2px 5px rgb(255, 0, 128);
+}
+
+.banner a:hover
+{
+    color: rgb(161, 255, 0);
+    text-shadow: 2px 2px 5px rgb(161, 255, 0);
+    border: 1px solid rgb(161, 255, 0);
+    box-shadow: 1px 1px 25px 10px rgba(161, 255, 0, 0.6);
+    transition: 0.4s;
+}
+
+.banner span
+{
+    color: rgb(255, 0, 128);
+    text-shadow: 2px 2px 5px rgb(255, 0, 128);
+}
+
+.banner h1
+{
+    font-size: 60px;
+}
+
+.banner h2
+{
+    font-size: 25px;
+}
+
+/* Projects page starts here */
+
+.container
+{
+   /* border: 1px solid rgb(255, 0, 128);*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
+
+.box
+{
+    /*border: 2px solid #FF0000;*/
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*box-shadow: 0px 0px 14px 6px rgba(255, 0, 128, 0.5);*/
+}
+
+/* The following will make the clickble area bigger */
+.box:first-child a
+{
+    text-decoration: none;
+    display: inline-block;     
+    position: relative;    
+    z-index: 1;     
+    padding: 180px 115px 180px 115px;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;    
+    /*border: 2px solid #FF0000;*/
+}
+
+.box:nth-child(2) a
+{
+    text-decoration: none;
+    display: inline-block;     
+    position: relative;    
+    z-index: 1;     
+    padding: 180px 142px 180px 142px;
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;     
+    /*border: 2px solid #FF0000;*/
+}
+
+.box:last-child a
+{
+    text-decoration: none;
+    display: inline-block;     
+    position: relative;    
+    z-index: 1;     
+    padding: 180px 108px 180px 108px;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;      
+    /*border: 2px solid #FF0000;*/
+}
+
+.box h1
+{
+    color: rgb(255, 0, 128);
+}
+.box:hover
+{
+    transition: 0.6s;
+    box-shadow: rgba(161, 255, 0, 0.25) 0px 30px 60px -12px inset, rgba(161, 255, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/*
+.box:last-child:hover
+{
+    transition: 0.6s;
+    box-shadow: rgba(161, 255, 0, 0.25) 0px 30px 60px -12px inset, rgba(161, 255, 0, 0.3) 0px 18px 36px -18px inset, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}*/
+
+.box a:hover h1
+{
+    transition: 0.6s;
+    color: rgb(161, 255, 0);
 }
 
