@@ -7,15 +7,14 @@
     <title>Carolina´s Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="backgrounds">
     <!-- Menu -->
     <nav id="main-menu">
         <ul> 
             <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects ></a>
+            <li><a href="projects.html"><span>Projects</span> <img src="images/arrowDown.png" width ="15px" style="vertical-align: middle;"></a>
                 <ul>
-                    <li><a href="#all-projects">All</a></li>
-                    <li><a href="animation.html">Animation</a></li>
+                    <li><a href="animation.html"><span>Animation</span></a></li>
                     <li><a href="design.html">Design</a></li>
                     <li><a href="illustration.html">Illustration</a></li>
                 </ul>
@@ -24,5 +23,34 @@
             <li><a href="contact.html">Contact me</a></li>
         </ul>
     </nav>
+
+    <div class="page-title">
+        <h1>Animation</h1>
+    </div>
+    
+    <section class="layout">
+        <div class="thumbnail-icon">
+            <img class="thumbnail-img" src="/images/thumbnails/evilBunny.png">
+            <div class="thumbnail-overlay">
+                <div class="thumbnail-title">Evil Bunny</div>
+                <p class="thumbnail-description">Frame by frame 2D animation.</p>
+            </div>
+        </div>
+        
+        <div class="thumbnail-icon">
+            <img class="thumbnail-img" src="/images/thumbnails/theKillerFrom1844.png">
+            <div class="thumbnail-overlay">
+                <div class="thumbnail-title">The Killer from 1844</div>
+                <p class="thumbnail-description">After Effects 30s animation.</p>
+            </div>
+        </div>
+        <div class="thumbnail-icon">
+            <img class="thumbnail-img" src="/images/thumbnails/woodDoll.png">
+            <div class="thumbnail-overlay">
+                <div class="thumbnail-title">Wood Doll</div>
+                <p class="thumbnail-description">2D character animation made on Unity.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

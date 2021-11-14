@@ -7,16 +7,15 @@
     <title>Carolina´s Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="backgrounds">
     <!-- Menu -->
     <nav id="main-menu">
         <ul> 
             <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects ></a>
+            <li><a href="projects.html"><span>Projects</span> <img src="images/arrowDown.png" width ="15px" style="vertical-align: middle;"></a>
                 <ul>
-                    <li><a href="#all-projects">All</a></li>
                     <li><a href="animation.html">Animation</a></li>
-                    <li><a href="design.html">Design</a></li>
+                    <li><a href="design.html"><span>Design</span></a></li>
                     <li><a href="illustration.html">Illustration</a></li>
                 </ul>
             </li>
@@ -24,5 +23,41 @@
             <li><a href="contact.html">Contact me</a></li>
         </ul>
     </nav>
+
+    <div class="page-title">
+        <h1>Design</h1>
+    </div>
+    
+    <section class="layout">
+        <div class="thumbnail-icon">
+            <img class="thumbnail-img" src="/images/thumbnails/cbfdPoster.png">
+            <div class="thumbnail-overlay">
+                <div class="thumbnail-title"><i>Conker's BFD</i> Poster</div>
+                <p class="thumbnail-description">Design of poster for <i>Conker´s Bad Fur Day</i>.</p>
+            </div>
+        </div>
+        
+        <div class="thumbnail-icon">
+            <img class="thumbnail-img" src="/images/thumbnails/eiOsd.png">
+            <div class="thumbnail-overlay">
+                <div class="thumbnail-title">One Sheet Document</div>
+                <p class="thumbnail-description">One sheet document for a fictional game.</p>
+            </div>
+        </div>
+        <div class="thumbnail-icon">
+            <img class="thumbnail-img" src="/images/thumbnails/socLogo.png">
+            <div class="thumbnail-overlay">
+                <div class="thumbnail-title">Spirits of Comori Logo</div>
+                <p class="thumbnail-description">Creation of a logo for a fictional PC game.</p>
+            </div>
+        </div>
+        <div class="thumbnail-icon">
+            <img class="thumbnail-img" src="/images/thumbnails/socSite.png">
+            <div class="thumbnail-overlay">
+                <div class="thumbnail-title">SOC Website</div>
+                <p class="thumbnail-description">Creation of a website for a fictional PC game.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
