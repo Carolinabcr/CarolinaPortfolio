@@ -122,7 +122,21 @@ nav span
     /* This maintains the total size of the box regardless of changing the inside values */
     box-sizing: border-box;
     text-shadow: 2px 2px 5px gray;
+    animation-duration: 3s;
+    animation-name: slideIn;
 }
+@keyframes slideIn 
+{
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 .banner a
 {
