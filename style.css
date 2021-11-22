@@ -15,18 +15,19 @@
     background-position: right bottom;
     background-attachment: fixed;
     background-size: 1000px;
+    /* Hides scroll bar from showing when home page animation is on */
+    overflow: hidden;
 }
 
 .backgrounds
 {
-    /* Color of all pages' backgrounds (except main page) */
+    /* Color of all pages backgrounds (except main page) */
     background-color: black;
 }
 
 /* MAIN MENU STARTS HERE */
 nav
 {
-    /*border: 2px solid #FF0000;*/
     margin: 20px 40px 10px 0px;
     font-size: 14px;
 }
@@ -41,8 +42,6 @@ nav span
     /* Removes bullets from list */
     list-style: none;
     text-align: right;
-    /*background-color: indianred;*/
-    /*font-size: 1vw;*/
 }
 #main-menu ul li
 {
@@ -62,7 +61,6 @@ nav span
     overflow: hidden;
     position: relative;
     transition: .4s;
-    /*border-radius: 10px;*/
 }
 
 /* Menu-bar colours change when mouse is over it */ 
@@ -72,6 +70,7 @@ nav span
     box-shadow: 1px 1px 25px 10px rgba(161, 255, 0, 0.6);
 }
 
+/* Little animation on buttons hover */
 #main-menu ul li a:before
 {
     content: "";
@@ -122,17 +121,43 @@ nav span
     /* This maintains the total size of the box regardless of changing the inside values */
     box-sizing: border-box;
     text-shadow: 2px 2px 5px gray;
+}
+
+/* Animation for home page content */
+.banner h1
+{
+    animation-duration: 2s;
+    animation-name: slideIn;
+}
+
+.banner h2
+{
+    animation-duration: 2.5s;
+    animation-name: slideIn;
+}
+
+#text
+{
     animation-duration: 3s;
     animation-name: slideIn;
 }
+
+#button
+{
+    animation-duration: 3.5s;
+    animation-name: slideIn;
+}
+
 @keyframes slideIn 
 {
-    from {
+    from 
+    {
       margin-left: 100%;
       width: 300%;
     }
   
-    to {
+    to 
+    {
       margin-left: 0%;
       width: 100%;
     }
@@ -173,7 +198,6 @@ nav span
 }
 
 /* PROJECTS PAGE STARTS HERE */
-
 .container
 {
    /* border: 1px solid rgb(255, 0, 128);*/
@@ -186,14 +210,12 @@ nav span
 
 .box
 {
-    /*border: 2px solid #FF0000;*/
     width: 400px;
     height: 400px;
     margin: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*box-shadow: 0px 0px 14px 6px rgba(255, 0, 128, 0.5);*/
 }
 
 /* The following will make the clickble area bigger */
@@ -204,8 +226,7 @@ nav span
     position: relative;    
     z-index: 1;     
     padding: 180px 115px 180px 115px;
-    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px;    
-    /*border: 2px solid #FF0000;*/
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px;
 }
 
 .box:nth-child(2) a
@@ -215,8 +236,7 @@ nav span
     position: relative;    
     z-index: 1;     
     padding: 180px 142px 180px 142px;
-    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px;     
-    /*border: 2px solid #FF0000;*/
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px;
 }
 
 .box:last-child a
@@ -226,8 +246,7 @@ nav span
     position: relative;    
     z-index: 1;     
     padding: 180px 108px 180px 108px;
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px;      
-    /*border: 2px solid #FF0000;*/
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px;
 }
 
 .box h1
@@ -244,13 +263,11 @@ nav span
 {
     
     box-shadow: rgba(161, 255, 0, 0.25) 0px 30px 60px -12px inset, rgba(161, 255, 0, 0.3) 0px 18px 36px -18px inset, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;    
-    /*border: 2px solid #FF0000;*/
 }
 
 .box:nth-child(2):hover
 {
     box-shadow: rgba(161, 255, 0, 0.25) 0px 30px 60px -12px inset, rgba(161, 255, 0, 0.3) 0px 18px 36px -18px inset, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;     
-    /*border: 2px solid #FF0000;*/
 }
 
 .box:last-child:hover
@@ -275,7 +292,6 @@ nav span
 
 .layout
 {
-    /*border: 2px solid #FF0000;*/
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 5%;
@@ -337,7 +353,6 @@ nav span
 /* ABOUT AND CONTACT PAGES START HERE */
 .profile-icon
 {
-    /*border: 2px solid #FF0000;*/
     width: 364px;
     height: 485px;
     box-shadow: 0px 0px 16px 6px rgba(255, 0, 128, 0.6);
@@ -351,7 +366,6 @@ nav span
 
 .profile-info
 {
-    /*border: 2px solid #FF0000;*/
     width: 600px;
     height: 485px;
     box-sizing: border-box;
@@ -399,7 +413,6 @@ nav span
 /* CONTACT ME LINKS */
 .contact-info
 {
-    /*border: 2px solid #FF0000;*/
     width: 600px;
     height: 485px;
     box-sizing: border-box;
@@ -428,7 +441,7 @@ nav span
 
 .social-networks
 {
-    /*border: 2px solid #FF0000;*/
+    /* border: 2px solid #FF0000; -> I use this to check visually the position of boxes */
     width: 300px;
     height: 150px;
     display: flex;
@@ -443,6 +456,7 @@ nav span
     height: 80px;
 }
 
+/* Little animation when hover on social networks items */
 .social-links > .social-img
 {
     position: relative;
